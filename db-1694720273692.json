@@ -1,0 +1,42 @@
+{
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Romania Road Trip",
+      "description": "Rent a car and travel from Bucuresti to Sibiu, Timisoara, Oradea, Cluj and back to Bucuresti",
+      "fromDate": "29.09.2023",
+      "toDate": "08.10.2023",
+      "priority": 2
+    },
+    {
+      "id": 2,
+      "name": "1 Week all inclusive in Greek",
+      "description": "Relaxing in an all inclusive hotel in greece",
+      "fromDate": "",
+      "toDate": "",
+      "priority": 3
+    },
+    {
+      "id": 3,
+      "name": "December Christmas Road Trip ",
+      "description": "Relaxing in an all inclusive hotel in greece",
+      "fromDate": "21.12.2023",
+      "toDate": "04.01.2024",
+      "priority": 1
+    }
+  ],
+  "top-links": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "Destinations",
+      "url": "/destinations"
+    },
+    {
+      "title": "About",
+      "url": "/about"
+    }
+  ]
+}

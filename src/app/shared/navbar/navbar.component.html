@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div (click)="toggleMenu()" class="hamburgerMenu">
+      <mat-icon color="accent">menu</mat-icon>
+    </div>
+    <div class="menuContainer">
+      <div
+        *ngFor="let mi of menuItems | async"
+        routerLink="{{ '/' + mi.url }}"
+        routerLinkActive="navLinkActive"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="navLink"
+      >
+        {{ mi.title }}
+      </div>
+    </div>
+    <div (click)="toggleApps()" class="hamburgerMenu">
+      <mat-icon color="accent">apps</mat-icon>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
