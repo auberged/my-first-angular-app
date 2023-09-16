@@ -42,6 +42,7 @@ export class DestinationRowComponent implements OnChanges {
   saveDestination(): void{
     (this.destinationForm.value.id == 0) ? this.destinationService.add(this.destinationForm.value as Destination) : this.destinationService.update(this.destinationForm.value as Destination);
     console.log('Getting raw value of id:', this.destinationForm.getRawValue().id);
+    this.dialogRef.close();
   }
 
   closeDestination(): void{

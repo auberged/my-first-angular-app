@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { Destination } from '../state/destination.model';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -8,7 +8,7 @@ import { tap } from 'rxjs';
 @Component({
   selector: 'app-destination-list',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatTableModule],
+  imports: [CommonModule, MatCardModule, MatTableModule, AsyncPipe],
   templateUrl: './destination-list.component.html',
   styleUrls: ['./destination-list.component.scss']
 })
