@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnChanges, SimpleChanges, inject } from '@angular/core';
+import { Component, Inject, Input, OnChanges, SimpleChanges, inject } from '@angular/core';
 import { FormBuilder, FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
-import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -20,18 +20,23 @@ import { DestinationsEntityService } from '../state/destination-entity.service';
   styleUrls: ['./destination-row.component.scss']
 })
 export class DestinationRowComponent implements OnChanges {
-  @Input() destination: Destination = new Destination();
+  destination = new Destination();
   fb = inject(FormBuilder);
   dialogRef = inject(MatDialogRef<DestinationRowComponent>);
   destinationService = inject(DestinationsEntityService);
 
   destinationForm = this.fb.group({
-    id: [0],
-    name: [''],
-    description: [''],
-    fromDate: [''],
-    toDate: [''],
+    id: this.destination.id,
+    name: this.destination.name,
+    description: this.destination.description,
+    fromDate: this.destination.fromDate,
+    toDate: this.destination.toDate,
   });
+
+  constructor( @Inject(MAT_DIALOG_DATA) public data: Destination ) {
+    if(data != null)
+      this.destinationForm.patchValue(data);
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     if(changes['destination']){
