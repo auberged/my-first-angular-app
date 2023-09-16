@@ -8,6 +8,6 @@ export const routes: Routes = [
   },
   {
     path: 'destinations',
-    loadComponent: () => import('./destination/destination.component').then(m => m.DestinationComponent)
+    loadComponent: () => import('./destination/destination-tabs/destination.component').then(m => m.DestinationComponent)
   }
 ]

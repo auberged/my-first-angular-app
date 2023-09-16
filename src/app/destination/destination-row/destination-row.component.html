@@ -1,0 +1,14 @@
+<div class="destinationRow">
+    <div class="name">{{ destination.name }}</div>
+    <div class="description">{{ destination.description }}</div>
+    <div class="priority">{{ destination.priority }}</div>
+    <div class="cmd">
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/destinations', destination.id]"
+      >
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+  </div>  

@@ -1,0 +1,17 @@
+<mat-toolbar color="accent">
+    <mat-toolbar-row>
+      <div class="title">SPA Skills</div>
+      <div>
+        <button mat-raised-button (click)="openAddModal()" color="primary">Add</button>
+        <mat-slide-toggle [formControl]="showPastDestinations" color="primary"
+          >Vergangene Reisen anzeigen</mat-slide-toggle>
+      </div>
+</mat-toolbar-row>
+</mat-toolbar>
+
+  <div *ngFor="let d of destinations | async" class="item">
+    <app-destination-row
+      [destination]="d"
+      (itemDeleted)="deleteItem($event)"
+    ></app-destination-row>
+  </div>  
