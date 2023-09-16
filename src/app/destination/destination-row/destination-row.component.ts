@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, inject } from '@angular/core';
-import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, Input, OnChanges, SimpleChanges, inject } from '@angular/core';
+import { FormBuilder, FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { Destination } from '../state/destination.model';
 import { MatButtonModule } from '@angular/material/button';
+import { DestinationsEntityService } from '../state/destination-entity.service';
 ;
 
 @Component({
@@ -18,10 +19,11 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './destination-row.component.html',
   styleUrls: ['./destination-row.component.scss']
 })
-export class DestinationRowComponent {
+export class DestinationRowComponent implements OnChanges {
   @Input() destination: Destination = new Destination();
   fb = inject(FormBuilder);
   dialogRef = inject(MatDialogRef<DestinationRowComponent>);
+  destinationService = inject(DestinationsEntityService);
 
   destinationForm = this.fb.group({
     id: [0],
@@ -31,8 +33,15 @@ export class DestinationRowComponent {
     toDate: [''],
   });
 
-  saveDestination(): void{
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes['destination']){
+      this.destinationForm.setValue(changes['destination'].currentValue);
+    }
+  }
 
+  saveDestination(): void{
+    (this.destinationForm.value.id == 0) ? this.destinationService.add(this.destinationForm.value as Destination) : this.destinationService.update(this.destinationForm.value as Destination);
+    console.log('Getting raw value of id:', this.destinationForm.getRawValue().id);
   }
 
   closeDestination(): void{
