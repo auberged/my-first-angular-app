@@ -1,8 +1,8 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <div (click)="toggleMenu()" class="hamburgerMenu">
+<!--     <div (click)="toggleMenu()" class="hamburgerMenu">
       <mat-icon color="accent">menu</mat-icon>
-    </div>
+    </div> -->
     <div class="menuContainer">
       <div
         *ngFor="let mi of menuItems | async"
@@ -14,8 +14,8 @@
         {{ mi.title }}
       </div>
     </div>
-    <div (click)="toggleApps()" class="hamburgerMenu">
+<!--     <div (click)="toggleApps()" class="hamburgerMenu">
       <mat-icon color="accent">apps</mat-icon>
-    </div>
+    </div> -->
   </mat-toolbar-row>
 </mat-toolbar>

@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import { DestinationRowComponent } from '../destination-row/destination-row.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { DestinationsEntityService } from '../state/destination-entity.service';
 
 @Component({
   selector: 'app-destination-list',
@@ -26,6 +27,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 })
 export class DestinationListComponent implements OnChanges {
   @Input() destination: Destination[] | null = [];
+  destinationService = inject(DestinationsEntityService);
 
   dataSource = new MatTableDataSource<Destination>([]);
   displayedColumns = ['actions', 'name', 'fromDate', 'toDate'];
@@ -51,7 +53,7 @@ export class DestinationListComponent implements OnChanges {
   }
 
   deleteDestination(destination: Destination): void{
-    
+    this.destinationService.delete(destination);
   }
 
 }

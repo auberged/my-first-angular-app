@@ -2,47 +2,24 @@
   "destinations": [
     {
       "id": 1,
-      "name": "Romania Road Trip",
-      "description": "Rent a car and travel from Bucuresti to Sibiu, Timisoara, Oradea, Cluj and back to Bucuresti",
+      "name": "Rumänien Road Trip",
+      "description": "Wir mieten uns ein Auto und fahren von Bukarest nach Sibiu, Timisoara, Oradea, Cluj und wieder zurück nach Bukarest.",
       "fromDate": "29.09.2023",
-      "toDate": "08.10.2023",
-      "priority": 2
+      "toDate": "08.10.2023"
     },
     {
       "id": 2,
       "name": "1 Woche all inclusive in Griechenland",
-      "description": "Relaxing in an all inclusive hotel in greece",
+      "description": "Möchten wir im Sommer 2024 machen. Wir müssen noch entscheiden wann und auf welcher griechischen Insel wir bleiben wollen. ",
       "fromDate": "",
       "toDate": ""
     },
     {
       "id": 3,
-      "name": "December Christmas Road Trip ",
-      "description": "Relaxing in an all inclusive hotel in greece",
+      "name": "Weihnachts Road Trip im Dezember",
+      "description": "Wir fahren am 21.12.2023 von Wien nach Strasburg mit dem Flixbus. In Strasburg borgen wir uns ein Auto aus und fahren damit durch Colmar, Eguisheim, Luxemburg, Brügge, Gent, Lille und Paris. In Paris kommen wir am 28.12.2023 an. Am 04.01.2024 fliegen wir zurück nach Wien",
       "fromDate": "21.12.2023",
-      "toDate": "04.01.2024",
-      "priority": 1
-    },
-    {
-      "id": 4,
-      "name": "sdf",
-      "description": "sdfsd",
-      "fromDate": "dsf",
-      "toDate": "dfs"
-    },
-    {
-      "id": 5,
-      "name": "Test 2",
-      "description": "sdlfksnd",
-      "fromDate": "lnksdfkln",
-      "toDate": "lknsdlkf"
-    },
-    {
-      "id": 6,
-      "name": "sdfs",
-      "description": "dfsdf",
-      "fromDate": "sdfsd",
-      "toDate": "fds"
+      "toDate": "04.01.2024"
     }
   ],
   "top-links": [
