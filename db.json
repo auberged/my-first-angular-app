@@ -48,15 +48,15 @@
   ],
   "top-links": [
     {
-      "title": "Home",
+      "title": "Startseite",
       "url": "/"
     },
     {
-      "title": "Destinations",
+      "title": "Reisen",
       "url": "/destinations"
     },
     {
-      "title": "About",
+      "title": "Über diese Seite",
       "url": "/about"
     }
   ]

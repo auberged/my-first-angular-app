@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatTabsModule} from '@angular/material/tabs';
+import { Component } from '@angular/core';
+import { MatTabsModule } from '@angular/material/tabs';
 import { DestinationContainerComponent } from '../destination-container/destination-container.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-destination',
