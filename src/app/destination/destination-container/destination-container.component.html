@@ -1,17 +1,15 @@
-<mat-toolbar color="accent">
+<mat-toolbar id="allDestinationsToolbar">
     <mat-toolbar-row>
-      <div class="title">SPA Skills</div>
-      <div>
-        <button mat-raised-button (click)="openAddModal()" color="primary">Add</button>
-        <mat-slide-toggle [formControl]="showPastDestinations" color="primary"
-          >Vergangene Reisen anzeigen</mat-slide-toggle>
-      </div>
+      <button mat-raised-button (click)="openAddModal()" color="accent" aria-label="Hinzufügen einer Reise">
+        Reise hinzufügen
+      </button>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>      
 </mat-toolbar-row>
 </mat-toolbar>
 
-  <div *ngFor="let d of destinations | async" class="item">
-    <app-destination-row
-      [destination]="d"
-      (itemDeleted)="deleteItem($event)"
-    ></app-destination-row>
-  </div>  
+<app-destination-list
+  [destination]="destinations | async"
+></app-destination-list>

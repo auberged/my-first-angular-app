@@ -9,6 +9,7 @@ import { routes } from './app.routes';
 import { destinationServiceConfig } from './destination/state/destination-data.service.config';
 import { entityConfig } from './destination/state/destination.metadata';
 import { appState } from './state/app.state';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -16,6 +17,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withInterceptorsFromDi()),
     provideStore(),
     provideState(appState),
+    provideAnimations(),
     provideEffects(),
     { provide: DefaultDataServiceConfig, useValue: destinationServiceConfig },
     provideEntityData(entityConfig, withEffects()),
