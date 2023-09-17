@@ -9,12 +9,19 @@
       <form
         [formGroup]="destinationForm"
         role="form"
-        novalidate
       >
         <input matInput type="text" formControlName="id" class="hidden"/>
         <mat-form-field>
           <mat-label>Name</mat-label>
           <input matInput type="text" formControlName="name" />
+          <mat-error
+            *ngIf="destinationForm.controls.name.hasError('minlength')"
+            >Name muss mindestens 4 Zeichen lang sein
+          </mat-error>
+          <mat-error
+            *ngIf="destinationForm.controls.name.hasError('required')"
+            >Name ist ein Pflichtfeld
+          </mat-error>
         </mat-form-field>
   
         <mat-form-field>
@@ -25,11 +32,18 @@
         <mat-form-field>
           <mat-label>Von</mat-label>
           <input  matInput type="text" formControlName="fromDate"/>
+          <mat-error
+            *ngIf="destinationForm.controls.fromDate.touched && destinationForm.controls.fromDate.errors?.['dateRangeMismatch']"
+            >Bitte gültiges Datum eingeben!
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field>
           <mat-label>Bis</mat-label>
           <input matInput type="text" formControlName="toDate" />
+          <mat-error *ngIf="destinationForm.errors'dateRangeValidator'">
+            Password does not match
+          </mat-error>
         </mat-form-field>
 
         <button mat-raised-button color="accent" (click)="saveDestination()">Speichern</button>
