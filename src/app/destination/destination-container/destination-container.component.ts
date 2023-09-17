@@ -33,7 +33,7 @@ export class DestinationContainerComponent implements OnInit {
   }
 
   openAddModal(): void {
-    this.addDialog.open(DestinationRowComponent, { width: '90vw' });
+    this.addDialog.open(DestinationRowComponent, { width: '50vw' });
   }
 
   deleteItem(item: Destination): void {
