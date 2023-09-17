@@ -14,4 +14,5 @@ import { MatButtonModule } from '@angular/material/button';
 export class IntroComponent {
   @Input() title: string = '';
   @Input() subtitle: string = '';
+  @Input() img: string = '';
 }

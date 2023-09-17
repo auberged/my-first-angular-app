@@ -1,11 +1,10 @@
-<mat-card appearance="outlined">
+<mat-card class="home-card" appearance="outlined">
   <mat-card-header>
     <mat-card-title>{{ title }}</mat-card-title>
     <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
   </mat-card-header>
+  <img mat-card-image src="assets/images/{{ img }}" alt="Photo of a sunrise in Constanta" />
   <mat-card-content>
-    <div class="showcase" column centered>
-    </div>
     <div class="instructions">
       <ng-content select=".instructions"></ng-content>
     </div>

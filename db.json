@@ -9,7 +9,7 @@
     },
     {
       "id": 2,
-      "name": "1 Woche all inclusive in Griechenland",
+      "name": "1 Woche all Inclusive in Griechenland",
       "description": "Möchten wir im Sommer 2024 machen. Wir müssen noch entscheiden wann und auf welcher griechischen Insel wir bleiben wollen. ",
       "fromDate": "",
       "toDate": ""
@@ -30,6 +30,10 @@
     {
       "title": "Reisen",
       "url": "/destinations"
+    },
+    {
+      "title": "Über diese Seite",
+      "url": "/about"
     }
   ]
 }
