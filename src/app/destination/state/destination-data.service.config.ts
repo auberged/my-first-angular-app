@@ -6,8 +6,8 @@ export const destinationServiceConfig: DefaultDataServiceConfig = {
     timeout: 3000,
     entityHttpResourceUrls: {
         Destination: {
-            entityResourceUrl: `${environment.api}destinations/`,
-            collectionResourceUrl: `${environment.api}destinations`
+            entityResourceUrl: `${environment.api}destinations.json/`,
+            collectionResourceUrl: `${environment.api}destinations.json`
         },
     }
 }

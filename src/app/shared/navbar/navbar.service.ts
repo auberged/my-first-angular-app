@@ -11,6 +11,6 @@ export class NavbarService {
   service = inject(HttpClient);
 
   getTopItems(): Observable<NavItem[]> {
-    return this.service.get<NavItem[]>(`${environment.api}top-links`);
+    return this.service.get<NavItem[]>(`${environment.api}top-links.json`);
   }
 }
